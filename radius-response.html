@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('radius-response', {
+    category: 'output',
+    color: '#a6bbcf',
+    defaults: {
+      server: {value: '', type: 'radius-server'},
+      name: {value: ''},
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: 'file.png',
+    label: function() {
+      return this.name || 'RADIUS'
+    },
+  })
+</script>
+
+<script type="text/x-red" data-template-name="radius-response">
+  <div class="form-row">
+    <label for="node-input-server"><i class="icon-tag"></i> Server</label>
+    <input type="text" id="node-input-server" placeholder="Server">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="radius-response">
+  <p>Send outgoing RADIUS responses.</p>
+</script>

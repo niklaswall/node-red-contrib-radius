@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('radius-request', {
+    category: 'input',
+    color: '#a6bbcf',
+    defaults: {
+      server: {value: '', type: 'radius-server'},
+      name: {value: ''},
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: 'file.png',
+    label: function() {
+      return this.name || 'RADIUS'
+    },
+  })
+</script>
+
+<script type="text/x-red" data-template-name="radius-request">
+  <div class="form-row">
+    <label for="node-input-server"><i class="icon-tag"></i> Server</label>
+    <input type="text" id="node-input-server" placeholder="Server">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="radius-request">
+  <p>Listens to incoming RADIUS authentication requests and outputs them as a payload.</p>
+</script>

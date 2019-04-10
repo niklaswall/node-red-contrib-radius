@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-radius",
+  "version": "0.0.1",
+  "author": "Niklas Wall",
+  "description": "Simple RADIUS nodes for node-red",
+  "license": "ICS",
+  "dependencies": {
+    "radius": "^1.1.4"
+  },
+  "keywords": [
+    "node-red",
+    "radius",
+    "auth",
+    "authentication"
+  ],
+  "node-red": {
+    "nodes": {
+      "radius-request": "radius-request.js",
+      "radius-response": "radius-response.js",
+      "radius-server": "radius-server.js"
+    }
+  }
+}
